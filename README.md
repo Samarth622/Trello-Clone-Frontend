@@ -1,73 +1,117 @@
-# React + TypeScript + Vite
+# Trello-Clone-Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fully interactive and modern **Trello-style Kanban Board Frontend**, built using **React**, **TypeScript**, and **Vite**, with clean architecture, reusable components, state management, and API integration.  
 
-Currently, two official plugins are available:
+This frontend communicates with the backend Trello API to perform actions like creating boards, lists, cards, reordering tasks, and much more.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🌟 Key Highlights
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- ⚡ Powered by **Vite** — ultra-fast development & builds  
+- 🧩 **Modular React Components**  
+- 🔒 Strong **TypeScript** type-safety  
+- 📦 Optimized folder structure for scalability  
+- 🎠 Drag-and-drop style UI (if added depending on your implementation)  
+- 🔗 Clean API integration using a dedicated service layer  
+- 🎨 Beautiful, responsive UI  
+- 🧹 ESLint + Code Formatting  
+- 🔥 Production-ready frontend architecture  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+# 📖 Table of Contents
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1. [Project Overview](#project-overview) 
+2. [Features](#features)  
+3. [Tech Stack](#tech-stack)    
+4. [Installation](#installation)  
+5. [Running Locally](#running-locally)   
+6. [Author](#author)  
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# 📘 Project Overview
+
+This project is the **frontend UI** for a Trello-like task management system.  
+
+Users can:
+
+- Create boards  
+- Add lists/columns  
+- Add cards/tasks  
+- Move cards between lists  
+- Edit and delete tasks  
+- Manage workflow visually  
+
+The UI is built using **React with TypeScript** to ensure seamless performance and scalability.
+
+---
+
+# 🚀 Features
+
+### 🔵 Board Features
+- Create new boards  
+- View all boards  
+- Click to open a board  
+
+### 🟢 List (Column) Features
+- Add lists inside a board  
+- Rename lists  
+- Delete lists  
+
+### 🟣 Card (Task) Features
+- Add cards  
+- Edit card contents  
+- Delete cards  
+- Move cards between lists  
+- Reorder cards inside a list  
+
+### 🔄 API-Connected
+Everything reflects real-time backend updates using REST API service layer.
+
+### 🧹 Clean Code Architecture
+- API services  
+- Custom hooks  
+- Centralized types  
+- Modular components  
+- Scalable UI structure  
+
+---
+
+# 🛠 Tech Stack
+
+| Category | Technology |
+|---------|------------|
+| **Frontend Framework** | React |
+| **Language** | TypeScript |
+| **Build Tool** | Vite |
+| **State Handling** | React Hooks / Context API |
+| **Styling** | CSS / Tailwind (if used) |
+| **Linting** | ESLint |
+| **Deployment** | Vercel / Netlify / Render |
+
+---
+
+# 📦 Installation
+
+```bash
+git clone https://github.com/Samarth622/Trello-Clone-Frontend.git
+cd Trello-Clone-Frontend
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+# ▶ Running Locally
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+---
+
+# 👨‍💻 Author
+Samarth Gupta
+🚀 Full Stack Developer | MERN | DevOps | Problem Solver
+GitHub: https://github.com/Samarth622
+
+LinkedIn: https://linkedin.com/in/samarthgupta622
