@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { useDroppable } from '@dnd-kit/core';
 import { SortableContext, verticalListSortingStrategy } from '@dnd-kit/sortable';
-import { Card } from '@/services/api';
-import { List } from '@/services/api';
-import { Button } from '@/components/ui/button';
+import type { Card } from '../services/api';
+import type { List } from '../services/api';
+import { Button } from '../components/ui/button';
 import { Plus } from 'lucide-react';
 import DraggableCard from './DraggableCard';
 import CreateCardDialog from './CreateCardDialog';
@@ -35,9 +35,9 @@ const BoardList = ({ list, cards, onCardClick, onCardCreated, boardId }: BoardLi
       </div>
 
       <div ref={setNodeRef} className="flex-1 space-y-2 overflow-y-auto p-3">
-        <SortableContext items={sortedCards.map((c) => c.id)} strategy={verticalListSortingStrategy}>
+        <SortableContext items={sortedCards.map((c) => c._id)} strategy={verticalListSortingStrategy}>
           {sortedCards.map((card) => (
-            <DraggableCard key={card.id} card={card} onClick={() => onCardClick(card)} />
+            <DraggableCard key={card._id} card={card} onClick={() => onCardClick(card)} />
           ))}
         </SortableContext>
 
@@ -64,7 +64,7 @@ const BoardList = ({ list, cards, onCardClick, onCardCreated, boardId }: BoardLi
         open={showCreateCard}
         onOpenChange={setShowCreateCard}
         boardId={boardId}
-        listId={list.id}
+        listId={list._id}
         onCardCreated={handleCardCreated}
       />
     </div>
